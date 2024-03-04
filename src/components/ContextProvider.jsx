@@ -7,6 +7,8 @@ const ContextProvider = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [movieData, setMovieData] = useState([]);
   const [inputText, setInputText] = useState("");
+  const [showLodder, setShowLodder] = useState(false);
+  const [showMovieInfo, setShowMovieInfo] = useState(false);
 
   return (
     <movieContext.Provider
@@ -17,6 +19,10 @@ const ContextProvider = ({ children }) => {
         setMovieData,
         isScrolled,
         setIsScrolled,
+        showLodder,
+        setShowLodder,
+        showMovieInfo,
+        setShowMovieInfo,
       }}
     >
       {children}
